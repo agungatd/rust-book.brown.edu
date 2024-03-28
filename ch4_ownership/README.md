@@ -12,3 +12,16 @@ Ownership is primarily a discipline of heap management:
 - Ownership can be transferred by moves, which happen on assignments and function calls.
 - Heap data can only be accessed through its current owner, not a previous owner.
 
+## References and Borrowing
+**Pointer Safety Principle: data should never be aliased and mutated at the same time.**
+### References:
+- References are non-owning pointers that refer to data on the heap.
+- Used to borro data for temporary access to data without ownership.
+- Prevents data from being used after it has been moved.
+### Borrowing:
+- Enforced by the Rust compiler's borrow checker to prevent data races.
+- Ensures only one mutable reference can access data at a time.
+### Immutability vs Mutability:
+- References can be mutable or immutable.
+- Immutable references cannot be used to modify the data they point to.
+- Mutable references can be used to modify the data they point to.
