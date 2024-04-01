@@ -1,5 +1,6 @@
 fn main() {
-    fun1();
+    // fun1();
+    fun2();
 }
 
 fn fun1() {
@@ -12,4 +13,13 @@ fn fun1() {
     println!("Check again, 3rd element is {}", *num);
     
     v.push(4);
+}
+
+fn fun2() {
+    // Mutable references provide unique and non-owning access to data.
+    let mut v: Vec<i32> = vec![1, 2, 3];
+    let num: &mut i32 = &mut v[2];
+    *num += 1;
+    println!("Third element is {}", *num);
+    println!("Vector is now {:?}", v);
 }
