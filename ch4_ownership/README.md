@@ -18,6 +18,7 @@ Ownership is primarily a discipline of heap management:
 - References are non-owning pointers that refer to data on the heap.
 - Used to borro data for temporary access to data without ownership.
 - Prevents data from being used after it has been moved.
+- References can temporarily remove RWO permissions.
 ### Borrowing:
 - Enforced by the Rust compiler's borrow checker to prevent data races.
 - Ensures only one mutable reference can access data at a time.
